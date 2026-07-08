@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
+import tythasLogo from "../../assets/tythas-logo.png";
 
 interface NavbarProps {
   onAuditClick: () => void;
@@ -31,26 +32,8 @@ export function Navbar({ onAuditClick }: NavbarProps) {
         width: "100%", display: "flex", alignItems: "center", justifyContent: "space-between",
       }}>
         {/* Logo */}
-        <a href="#" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: "10px" }}>
-          {/* Tythas mark — T letterform with upward arrow accent */}
-          <div style={{
-            width: "34px", height: "34px", borderRadius: "9px",
-            background: "linear-gradient(135deg, #1D4ED8 0%, #2563EB 100%)",
-            display: "flex", alignItems: "center", justifyContent: "center",
-            boxShadow: "0 2px 8px rgba(37,99,235,0.28)",
-          }}>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-              {/* Horizontal bar of T */}
-              <rect x="3" y="4" width="14" height="2.5" rx="1.25" fill="white"/>
-              {/* Vertical stem of T */}
-              <rect x="8.75" y="6.5" width="2.5" height="9.5" rx="1.25" fill="white"/>
-              {/* Small upward accent chevron */}
-              <path d="M7.5 3.5L10 1.2L12.5 3.5" stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" opacity="0.55"/>
-            </svg>
-          </div>
-          <span style={{ fontFamily: "'Manrope', sans-serif", fontWeight: 800, fontSize: "18px", color: "#0F172A", letterSpacing: "-0.5px" }}>
-            Tythas
-          </span>
+        <a href="#" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
+          <img src={tythasLogo} alt="Tythas — Results That Matter" style={{ height: "44px", width: "auto", display: "block" }} />
         </a>
 
         {/* Desktop Centre Nav */}

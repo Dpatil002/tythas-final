@@ -1,4 +1,5 @@
 import { Mail, Phone, MapPin, Twitter, Linkedin, Instagram } from "lucide-react";
+import tythasLogo from "../../assets/tythas-logo.png";
 
 interface FooterProps { onAuditClick: () => void; }
 
@@ -15,15 +16,8 @@ export function Footer({ onAuditClick }: FooterProps) {
         <div style={{ display:"grid", gridTemplateColumns:"2fr 1fr 1fr 1fr 1.4fr", gap:"48px", paddingBottom:"56px", borderBottom:"1px solid rgba(255,255,255,0.07)" }} className="footer-grid">
           {/* Brand */}
           <div>
-            <div style={{ display:"flex", alignItems:"center", gap:"10px", marginBottom:"16px" }}>
-              <div style={{ width:"32px", height:"32px", background:"linear-gradient(135deg,#1D4ED8 0%,#2563EB 100%)", borderRadius:"8px", display:"flex", alignItems:"center", justifyContent:"center", boxShadow:"0 2px 8px rgba(37,99,235,0.28)" }}>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                  <rect x="3" y="4" width="14" height="2.5" rx="1.25" fill="white"/>
-                  <rect x="8.75" y="6.5" width="2.5" height="9.5" rx="1.25" fill="white"/>
-                  <path d="M7.5 3.5L10 1.2L12.5 3.5" stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" opacity="0.55"/>
-                </svg>
-              </div>
-              <span style={{ fontFamily:"'Manrope',sans-serif", fontWeight:800, fontSize:"17px", color:"#FFFFFF", letterSpacing:"-0.4px" }}>Tythas</span>
+            <div style={{ background:"#FFFFFF", borderRadius:"10px", padding:"8px 14px", display:"inline-flex", alignItems:"center", marginBottom:"16px" }}>
+              <img src={tythasLogo} alt="Tythas — Results That Matter" style={{ height:"34px", width:"auto", display:"block" }} />
             </div>
             <p style={{ fontFamily:"'Inter',sans-serif", fontSize:"14px", lineHeight:1.75, color:"#64748B", margin:"0 0 24px", maxWidth:"240px" }}>
               Strategy, design, development, SEO and automation for websites built to generate qualified leads.
