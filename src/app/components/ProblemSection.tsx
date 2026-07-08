@@ -2,10 +2,10 @@ import { motion } from "motion/react";
 import { EyeOff, MousePointerClick, LayoutDashboard, Filter } from "lucide-react";
 
 const problems = [
-  { icon: <EyeOff size={22}/>, title: "Low Visibility", text: "Your ideal customers cannot find your business online." },
-  { icon: <MousePointerClick size={22}/>, title: "Low Conversion Rates", text: "Visitors reach your website but leave without taking action." },
-  { icon: <LayoutDashboard size={22}/>, title: "Poor User Experience", text: "Confusing navigation and outdated design reduce trust." },
-  { icon: <Filter size={22}/>, title: "Unqualified Enquiries", text: "Your team wastes time following up with low-intent leads." },
+  { icon: <EyeOff size={22}/>, title: "You're Hard to Find", text: "Potential customers are searching for businesses like yours, but they're finding your competitors instead." },
+  { icon: <MousePointerClick size={22}/>, title: "Visitors Leave Without Taking Action", text: "People visit your website but don't enquire, book a call or request a quote." },
+  { icon: <LayoutDashboard size={22}/>, title: "Your Website Doesn't Build Trust", text: "An outdated design, confusing content and poor user experience make prospects hesitate before contacting you." },
+  { icon: <Filter size={22}/>, title: "Your Sales Team Chases the Wrong Leads", text: "Instead of attracting qualified enquiries, your website creates unnecessary follow-ups and wasted effort." },
 ];
 
 interface ProblemSectionProps { onAuditClick?: () => void; }
@@ -16,10 +16,10 @@ export function ProblemSection({ onAuditClick }: ProblemSectionProps) {
       <div style={{ maxWidth: "1240px", margin: "0 auto", padding: "0 28px" }}>
         <motion.div initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once:true }} transition={{ duration:0.45 }} style={{ textAlign:"center", marginBottom:"56px" }}>
           <h2 style={{ fontFamily:"'Manrope',sans-serif", fontWeight:800, fontSize:"clamp(28px,3.5vw,42px)", color:"#0F172A", margin:"0 0 16px", letterSpacing:"-0.8px", lineHeight:1.12 }}>
-            Your Website Should Be Your Best Salesperson
+            Is Your Website Helping Your Business Grow or Holding It Back?
           </h2>
           <p style={{ fontFamily:"'Inter',sans-serif", fontSize:"18px", lineHeight:1.7, color:"#475569", maxWidth:"560px", margin:"0 auto" }}>
-            Most business websites look acceptable but fail to generate measurable business results.
+            If your website isn't bringing customers, it's not working as hard as it should.
           </p>
         </motion.div>
 

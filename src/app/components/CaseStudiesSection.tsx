@@ -6,7 +6,7 @@ const cases = [
     tag: "Manufacturing Company",
     title: "Industrial B2B Lead System",
     challenge: "Low online visibility and no structured lead capture for a complex B2B product line.",
-    metrics: [{ val: "+68%", label: "Qualified Leads" }, { val: "+175%", label: "Organic Traffic" }],
+    sentence: "The client went from relying on referrals to generating qualified enquiries every month through their website.",
     color: "#2563EB", bg: "#EFF6FF",
   },
   {
@@ -34,7 +34,7 @@ export function CaseStudiesSection() {
             Real Results. Not Empty Promises.
           </h2>
           <p style={{ fontFamily:"'Inter',sans-serif", fontSize:"18px", lineHeight:1.7, color:"#475569", maxWidth:"560px", margin:"0 auto" }}>
-            See how strategy-led design and optimisation helped businesses improve their digital performance.
+            Every business has different challenges. Here's how we solved them and the results we achieved.
           </p>
         </motion.div>
 
@@ -49,14 +49,18 @@ export function CaseStudiesSection() {
               {/* Metric band */}
               <div style={{ background:c.bg, padding:"20px 24px", borderBottom:"1px solid #E2E8F0" }}>
                 <span style={{ fontFamily:"'Inter',sans-serif", fontWeight:600, fontSize:"11px", color:c.color, textTransform:"uppercase", letterSpacing:"0.6px", display:"block", marginBottom:"14px" }}>{c.tag}</span>
-                <div style={{ display:"flex", gap:"24px" }}>
-                  {c.metrics.map(m=>(
-                    <div key={m.label}>
-                      <div style={{ fontFamily:"'Manrope',sans-serif", fontWeight:800, fontSize:"26px", color:c.color, lineHeight:1.1 }}>{m.val}</div>
-                      <div style={{ fontFamily:"'Inter',sans-serif", fontSize:"12px", color:"#64748B", marginTop:"2px" }}>{m.label}</div>
-                    </div>
-                  ))}
-                </div>
+                {c.sentence ? (
+                  <p style={{ fontFamily:"'Manrope',sans-serif", fontWeight:700, fontSize:"16px", color:"#0F172A", lineHeight:1.45, margin:0 }}>{c.sentence}</p>
+                ) : (
+                  <div style={{ display:"flex", gap:"24px" }}>
+                    {c.metrics!.map(m=>(
+                      <div key={m.label}>
+                        <div style={{ fontFamily:"'Manrope',sans-serif", fontWeight:800, fontSize:"26px", color:c.color, lineHeight:1.1 }}>{m.val}</div>
+                        <div style={{ fontFamily:"'Inter',sans-serif", fontSize:"12px", color:"#64748B", marginTop:"2px" }}>{m.label}</div>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
               {/* Body */}
               <div style={{ padding:"20px 24px" }}>

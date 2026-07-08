@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
 
-const steps = ["Traffic","Engagement","Qualification","Conversion","Automation","Growth"];
+const steps = ["Attract","Engage","Convert","Automate","Measure","Grow"];
 const colors = ["#2563EB","#7C3AED","#0891B2","#16A34A","#EA580C","#2563EB"];
 
 export function SolutionFlowSection() {
@@ -14,7 +14,7 @@ export function SolutionFlowSection() {
             <span style={{ color:"#2563EB" }}>We Build Growth Systems.</span>
           </h2>
           <p style={{ fontFamily:"'Inter',sans-serif", fontSize:"18px", lineHeight:1.7, color:"#475569", maxWidth:"620px", margin:"0 auto" }}>
-            Every website is strategically designed to attract the right audience, communicate value clearly, capture qualified leads and automate follow-ups.
+            From the first visit to the final enquiry, we build websites that attract, engage, convert and support long term business growth.
           </p>
         </motion.div>
 

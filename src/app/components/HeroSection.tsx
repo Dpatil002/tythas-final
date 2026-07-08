@@ -111,15 +111,15 @@ export function HeroSection({ onAuditClick }: HeroSectionProps) {
             fontSize:"clamp(38px,5vw,64px)", lineHeight:1.08,
             color:"#0F172A", margin:"0 0 24px", letterSpacing:"-1.5px",
           }}>
-            Turn Your Website Into a{" "}
-            <span style={{ color:"#2563EB" }}>Qualified Lead-Generation System.</span>
+            Build a Digital Presence That Brings You{" "}
+            <span style={{ color:"#2563EB" }}>More Business.</span>
           </motion.h1>
 
           <motion.p initial={{ opacity:0, y:16 }} animate={{ opacity:1, y:0 }} transition={{ duration:0.45, delay:0.14 }} style={{
             fontFamily:"'Inter',sans-serif", fontSize:"18px", lineHeight:1.75,
             color:"#475569", margin:"0 0 36px", maxWidth:"520px",
           }}>
-            We design high-converting websites powered by strategy, UX, SEO and AI automation — helping businesses attract, qualify and convert more customers.
+            We help growing businesses attract the right audience, generate qualified enquiries and turn more visitors into customers.
           </motion.p>
 
           <motion.div initial={{ opacity:0, y:12 }} animate={{ opacity:1, y:0 }} transition={{ duration:0.4, delay:0.2 }} style={{ display:"flex", gap:"12px", flexWrap:"wrap", marginBottom:"36px" }}>
@@ -132,7 +132,7 @@ export function HeroSection({ onAuditClick }: HeroSectionProps) {
             }}
               onMouseEnter={e=>{ e.currentTarget.style.background="#1D4ED8"; e.currentTarget.style.transform="translateY(-1px)"; }}
               onMouseLeave={e=>{ e.currentTarget.style.background="#2563EB"; e.currentTarget.style.transform="translateY(0)"; }}
-            >Get Your Free Website Audit <ArrowRight size={16}/></button>
+            >Get My Free Website Audit <ArrowRight size={16}/></button>
             <a href="#" style={{
               fontFamily:"'Inter',sans-serif", fontWeight:600, fontSize:"16px",
               color:"#0F172A", background:"#FFFFFF", border:"1px solid #E2E8F0",
@@ -142,7 +142,7 @@ export function HeroSection({ onAuditClick }: HeroSectionProps) {
             }}
               onMouseEnter={e=>{ e.currentTarget.style.borderColor="#2563EB"; e.currentTarget.style.transform="translateY(-1px)"; }}
               onMouseLeave={e=>{ e.currentTarget.style.borderColor="#E2E8F0"; e.currentTarget.style.transform="translateY(0)"; }}
-            >View Our Work</a>
+            >See Our Work</a>
           </motion.div>
 
           {/* Trust row */}

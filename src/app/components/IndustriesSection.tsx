@@ -4,27 +4,27 @@ import { ArrowUpRight } from "lucide-react";
 const industries = [
   {
     name: "Manufacturing & Industrial",
-    desc: "Lead generation for complex B2B sales cycles and industrial buyers.",
+    desc: "Generate more B2B enquiries and showcase your capabilities to the right buyers.",
     img: "https://images.unsplash.com/photo-1717386255773-1e3037c81788?w=600&h=400&fit=crop&auto=format",
   },
   {
     name: "Professional Services",
-    desc: "Authority-building websites that attract high-value clients.",
+    desc: "Build trust, attract qualified clients and grow through a stronger online presence.",
     img: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&h=400&fit=crop&auto=format",
   },
   {
     name: "Healthcare & Clinics",
-    desc: "Patient-focused websites optimised for appointment enquiries.",
+    desc: "Help more patients discover, trust and book your healthcare services online.",
     img: "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=600&h=400&fit=crop&auto=format",
   },
   {
     name: "Real Estate & Construction",
-    desc: "High-converting property and project websites with lead capture.",
+    desc: "Generate quality property enquiries and build credibility with potential buyers and investors.",
     img: "https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?w=600&h=400&fit=crop&auto=format",
   },
   {
     name: "Consultants & B2B Agencies",
-    desc: "Thought-leadership platforms built to generate qualified enquiries.",
+    desc: "Attract high value clients and turn expertise into consistent business opportunities.",
     img: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&h=400&fit=crop&auto=format",
   },
 ];

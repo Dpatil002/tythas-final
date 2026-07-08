@@ -2,12 +2,12 @@ import { motion } from "motion/react";
 import { Map, Monitor, Search, BarChart2, Bot, LineChart, ArrowRight } from "lucide-react";
 
 const services = [
-  { icon:<Map size={22}/>, title:"Website Strategy & UX", text:"Research-driven information architecture, user flows and conversion strategy." },
-  { icon:<Monitor size={22}/>, title:"UI Design & Development", text:"Fast, responsive and modern websites for desktop and mobile." },
-  { icon:<Search size={22}/>, title:"SEO & AI Search Optimization", text:"Build visibility across Google, AI search engines and relevant customer searches." },
-  { icon:<BarChart2 size={22}/>, title:"Conversion Rate Optimization", text:"Improve user journeys, calls-to-action, forms and landing-page performance." },
-  { icon:<Bot size={22}/>, title:"AI & Automation Integration", text:"Add intelligent chatbots, lead qualification, recommendations and workflow automation." },
-  { icon:<LineChart size={22}/>, title:"Analytics & Growth Tracking", text:"Track conversions, lead sources, user behaviour and measurable business growth." },
+  { icon:<Map size={22}/>, title:"Website Strategy", text:"Build a website around your business goals, customers and growth opportunities." },
+  { icon:<Monitor size={22}/>, title:"Website Design & Development", text:"Fast, modern websites built to earn trust and generate more enquiries." },
+  { icon:<Search size={22}/>, title:"SEO & AI Search", text:"Help the right customers find your business through search and AI platforms." },
+  { icon:<BarChart2 size={22}/>, title:"Conversion Optimization", text:"Turn more visitors into enquiries without increasing your marketing spend." },
+  { icon:<Bot size={22}/>, title:"AI & Automation", text:"Automate repetitive tasks and respond to leads faster with intelligent workflows." },
+  { icon:<LineChart size={22}/>, title:"Analytics & Reporting", text:"Track performance, measure results and make smarter business decisions with confidence." },
 ];
 
 interface ServicesSectionProps { onAuditClick: () => void; }
@@ -18,7 +18,7 @@ export function ServicesSection({ onAuditClick }: ServicesSectionProps) {
       <div style={{ maxWidth:"1240px", margin:"0 auto", padding:"0 28px" }}>
         <motion.div initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once:true }} transition={{ duration:0.45 }} style={{ textAlign:"center", marginBottom:"56px" }}>
           <h2 style={{ fontFamily:"'Manrope',sans-serif", fontWeight:800, fontSize:"clamp(28px,3.5vw,42px)", color:"#0F172A", margin:"0 0 16px", letterSpacing:"-0.8px", lineHeight:1.12 }}>
-            Everything Required to Build a Website That Performs
+            Everything Your Business Needs to Grow Online
           </h2>
         </motion.div>
 

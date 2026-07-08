@@ -1,11 +1,11 @@
 import { motion } from "motion/react";
 
 const steps = [
-  { num:"01", title:"Discover", text:"Understand the business, audience, goals and competition." },
-  { num:"02", title:"Research & Strategy", text:"Define positioning, user journeys, content structure and conversion opportunities." },
-  { num:"03", title:"Design & Development", text:"Create responsive UX/UI and develop a fast, scalable website." },
-  { num:"04", title:"Optimise & Automate", text:"Implement SEO, CRO, analytics, CRM, AI and lead automation." },
-  { num:"05", title:"Measure & Improve", text:"Track performance, study user behaviour and continuously improve results." },
+  { num:"01", title:"Business First", text:"Every decision starts with your business goals, not design trends." },
+  { num:"02", title:"Strategy Before Design", text:"We don't open Figma first. We understand your customers first." },
+  { num:"03", title:"Every Page Has a Purpose", text:"Every page should educate, build trust or generate enquiries." },
+  { num:"04", title:"Measure Everything", text:"If we can't measure it, we can't improve it." },
+  { num:"05", title:"Continuous Growth", text:"Launching your website isn't the finish line. It's the starting point." },
 ];
 
 export function ProcessSection() {
@@ -14,10 +14,10 @@ export function ProcessSection() {
       <div style={{ maxWidth:"1240px", margin:"0 auto", padding:"0 28px" }}>
         <motion.div initial={{ opacity:0, y:20 }} whileInView={{ opacity:1, y:0 }} viewport={{ once:true }} transition={{ duration:0.45 }} style={{ textAlign:"center", marginBottom:"64px" }}>
           <h2 style={{ fontFamily:"'Manrope',sans-serif", fontWeight:800, fontSize:"clamp(28px,3.5vw,42px)", color:"#0F172A", margin:"0 0 16px", letterSpacing:"-0.8px", lineHeight:1.12 }}>
-            Our Proven Website Growth Process
+            How We Turn Strategy Into Business Growth
           </h2>
           <p style={{ fontFamily:"'Inter',sans-serif", fontSize:"18px", lineHeight:1.7, color:"#475569", maxWidth:"520px", margin:"0 auto" }}>
-            A transparent process built to reduce uncertainty and deliver measurable outcomes.
+            A structured approach that turns your website into a long term business asset.
           </p>
         </motion.div>
 
