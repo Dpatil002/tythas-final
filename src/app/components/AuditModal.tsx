@@ -300,8 +300,8 @@ export function AuditModal({ isOpen, onClose }: AuditModalProps) {
                     style={{ padding:"20px 24px 24px" }}
                   >
                     {/* Honeypot */}
-                    <div style={{ position:"absolute",left:"-9999px",opacity:0,pointerEvents:"none" }}>
-                      <input type="text" value={form._hp} onChange={e=>setField("_hp",e.target.value)} tabIndex={-1} autoComplete="off"/>
+                    <div style={{ display:"none" }} aria-hidden="true">
+                      <input type="text" name="hp_confirm_email" value={form._hp} onChange={e=>setField("_hp",e.target.value)} tabIndex={-1} autoComplete="off"/>
                     </div>
 
                     {/* Error banner */}
