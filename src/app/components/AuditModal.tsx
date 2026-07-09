@@ -112,8 +112,8 @@ function Step1({ form, set, errors, touched, touch }: any) {
 function Step2({ form, set, errors, touched, touch }: any) {
   return (
     <div style={{ display:"flex", flexDirection:"column", gap:"14px" }}>
-      <Field label="Website URL" required error={touched.website_url?errors.website_url:undefined} hint="We'll review this for UX, SEO, trust and lead-capture opportunities.">
-        <SInput placeholder="https://yourwebsite.com" value={form.website_url} onChange={e=>set("website_url",e.target.value)} onBlur={()=>touch("website_url")} err={!!(touched.website_url&&errors.website_url)}/>
+      <Field label="Website URL" required error={touched.website_url?errors.website_url:undefined} hint="We'll review this for UX, SEO, trust and lead-capture opportunities. (https:// is optional)">
+        <SInput placeholder="yourwebsite.com" value={form.website_url} onChange={e=>set("website_url",e.target.value)} onBlur={()=>touch("website_url")} err={!!(touched.website_url&&errors.website_url)}/>
       </Field>
       <Field label="Industry">
         <SSelect opts={INDUSTRIES} placeholder="Select your industry" value={form.industry} onChange={v=>set("industry",v)}/>
@@ -175,7 +175,7 @@ export function AuditModal({ isOpen, onClose }: AuditModalProps) {
   if(!form.email.trim()) errors.email="Email is required";
   else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) errors.email="Enter a valid email";
   if(!form.website_url.trim()) errors.website_url="Website URL is required";
-  else if(!/^https?:\/\/.+\..+/.test(form.website_url)) errors.website_url="Enter a valid URL (include https://)";
+  else if(!/^(https?:\/\/)?[^\s]+\.[a-z]{2,}([/?#].*)?$/i.test(form.website_url.trim())) errors.website_url="Enter a valid website URL (e.g. yourwebsite.com)";
 
   useEffect(() => {
     if(isOpen){ setStep(0); setForm(BLANK); setTouched(new Set()); setStatus("idle"); setServerError(""); }
@@ -209,10 +209,14 @@ export function AuditModal({ isOpen, onClose }: AuditModalProps) {
     setStatus("loading");
     setServerError("");
     try {
+      const normalizedUrl = /^https?:\/\//i.test(form.website_url.trim())
+        ? form.website_url.trim()
+        : `https://${form.website_url.trim()}`;
+
       const { error } = await supabase.from("website_audit_requests").insert([{
         name: form.name.trim(),
         company_name: form.company_name.trim(),
-        website_url: form.website_url.trim(),
+        website_url: normalizedUrl,
         email: form.email.trim().toLowerCase(),
         phone: form.phone.trim(),
         improvement_goal: [form.primary_goal, form.current_problem, form.message].filter(Boolean).join(" | "),
