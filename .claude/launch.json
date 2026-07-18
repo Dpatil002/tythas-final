@@ -12,6 +12,12 @@
       "runtimeExecutable": "npx",
       "runtimeArgs": ["vite", "preview", "--port", "4173"],
       "port": 4173
+    },
+    {
+      "name": "lexicon-schools-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "/Users/dinuu/Downloads/lexicon-schools", "run", "dev"],
+      "port": 3000
     }
   ]
 }

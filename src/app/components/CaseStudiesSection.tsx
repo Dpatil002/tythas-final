@@ -3,24 +3,27 @@ import { ArrowUpRight, TrendingUp } from "lucide-react";
 
 const cases = [
   {
-    tag: "Manufacturing Company",
-    title: "Industrial B2B Lead System",
-    challenge: "Low online visibility and no structured lead capture for a complex B2B product line.",
-    sentence: "The client went from relying on referrals to generating qualified enquiries every month through their website.",
+    tag: "Dewaxify",
+    title: "Ear Wax Removal Clinic, UK",
+    challenge: "7,900% increase in organic traffic over 12 months period, clicks went from 40 to steady 4000.",
+    metrics: [{ val: "+200%", label: "Appointment Enquiries" }, { val: "+3×", label: "Website Conversions" }],
+    website: "https://dewaxifylondon.com/",
     color: "#2563EB", bg: "#EFF6FF",
   },
   {
-    tag: "Healthcare Brand",
-    title: "Clinic Appointment Platform",
-    challenge: "Outdated website failing to convert visitors into patient appointment enquiries.",
-    metrics: [{ val: "+42%", label: "Appointment Enquiries" }, { val: "+145%", label: "Website Conversion" }],
+    tag: "SB Patil Group",
+    title: "Luxury Real Estate",
+    challenge: "Directly converted traffic gains into business revenue by scaling monthly enquiries from 40 to 250 per month.",
+    metrics: [{ val: "66.67%", label: "Organic Growth" }, { val: "4.3%", label: "CTR" }],
+    website: "https://sbpatilgroup.in/",
     color: "#16A34A", bg: "#F0FDF4",
   },
   {
-    tag: "Professional Services Firm",
-    title: "B2B Authority Website",
-    challenge: "Generic website with no content strategy, weak SEO and unqualified inbound leads.",
+    tag: "Gixel Labs",
+    title: "Building Authority in an AI Market",
+    challenge: "Positioned the brand as an industry authority using SEO, content strategy and conversion focused website improvements.",
     metrics: [{ val: "+300%", label: "Organic Enquiries" }, { val: "1.8×", label: "Return on Marketing Spend" }],
+    website: "https://www.gixellabs.com/",
     color: "#7C3AED", bg: "#F5F3FF",
   },
 ];
@@ -66,16 +69,13 @@ export function CaseStudiesSection() {
               <div style={{ padding:"20px 24px" }}>
                 <h3 style={{ fontFamily:"'Manrope',sans-serif", fontWeight:700, fontSize:"18px", color:"#0F172A", margin:"0 0 10px" }}>{c.title}</h3>
                 <p style={{ fontFamily:"'Inter',sans-serif", fontSize:"14px", lineHeight:1.65, color:"#475569", margin:"0 0 18px" }}>{c.challenge}</p>
-                <a href="#" style={{ display:"inline-flex", alignItems:"center", gap:"5px", fontFamily:"'Inter',sans-serif", fontWeight:600, fontSize:"13px", color:c.color, textDecoration:"none", transition:"gap 0.18s" }}
+                <a href={c.website} target="_blank" rel="noopener noreferrer" style={{ display:"inline-flex", alignItems:"center", gap:"5px", fontFamily:"'Inter',sans-serif", fontWeight:600, fontSize:"13px", color:c.color, textDecoration:"none", transition:"gap 0.18s" }}
                   onMouseEnter={e=>e.currentTarget.style.gap="9px"} onMouseLeave={e=>e.currentTarget.style.gap="5px"}
-                >View Case Study <ArrowUpRight size={14}/></a>
+                >View Website <ArrowUpRight size={14}/></a>
               </div>
             </motion.div>
           ))}
         </div>
-        <p style={{ fontFamily:"'Inter',sans-serif", fontSize:"12px", color:"#94A3B8", textAlign:"center", marginTop:"16px" }}>
-          * All results are representative and marked as placeholders until verified client data is confirmed.
-        </p>
       </div>
       <style>{`@media (max-width:860px) { .cases-grid { grid-template-columns:1fr !important; } }`}</style>
     </section>
