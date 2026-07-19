@@ -9,7 +9,7 @@ import { CaseStudiesSection } from "./components/CaseStudiesSection";
 import { ProcessSection } from "./components/ProcessSection";
 import { ServicesSection } from "./components/ServicesSection";
 import { AISolutionsSection } from "./components/AISolutionsSection";
-import { TestimonialsSection } from "./components/TestimonialsSection";
+import { PromiseSection } from "./components/PromiseSection";
 import { AuditLeadMagnetSection } from "./components/AuditLeadMagnetSection";
 import { FinalCTASection } from "./components/FinalCTASection";
 import { Footer } from "./components/Footer";
@@ -32,7 +32,7 @@ export default function App() {
         <ProcessSection/>
         <ServicesSection onAuditClick={open}/>
         <AISolutionsSection/>
-        <TestimonialsSection/>
+        <PromiseSection/>
         <AuditLeadMagnetSection onAuditClick={open}/>
         <FinalCTASection onAuditClick={open}/>
       </main>
