@@ -97,14 +97,8 @@ export function PromiseSection() {
           </motion.p>
 
           <motion.div variants={lineUp} style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-              <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#0F172A", flexShrink: 0 }} />
-              <span style={{ fontFamily: "'Manrope',sans-serif", fontWeight: 700, fontSize: "17px", color: "#0F172A" }}>You focus on delivering great products and services.</span>
-            </div>
-            <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-              <span style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#2563EB", flexShrink: 0 }} />
-              <span style={{ fontFamily: "'Manrope',sans-serif", fontWeight: 700, fontSize: "17px", color: "#2563EB" }}>We'll focus on making sure the right customers find you.</span>
-            </div>
+            <span style={{ fontFamily: "'Manrope',sans-serif", fontWeight: 700, fontSize: "17px", color: "#0F172A" }}>You focus on delivering great products and services.</span>
+            <span style={{ fontFamily: "'Manrope',sans-serif", fontWeight: 700, fontSize: "17px", color: "#2563EB" }}>We'll focus on making sure the right customers find you.</span>
           </motion.div>
         </motion.div>
       </div>
