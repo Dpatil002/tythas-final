@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { Menu, X, ChevronDown, Phone } from "lucide-react";
 import tythasLogo from "../../assets/tythas-logo.png";
 
 interface NavbarProps {
@@ -7,6 +7,62 @@ interface NavbarProps {
 }
 
 const NAV_LINKS = ["Services", "Solutions", "Industries", "Case Studies", "About", "Resources"];
+const PHONE_NUMBERS = ["8767977216", "7887685816"];
+const formatPhone = (n: string) => `+91 ${n.slice(0, 5)} ${n.slice(5)}`;
+
+function PhoneDropdown({ align = "right" }: { align?: "left" | "right" }) {
+  const [open, setOpen] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const onClick = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false);
+    };
+    document.addEventListener("mousedown", onClick);
+    return () => document.removeEventListener("mousedown", onClick);
+  }, [open]);
+
+  return (
+    <div ref={ref} style={{ position: "relative" }}>
+      <button onClick={() => setOpen(o => !o)} style={{
+        fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "14px",
+        color: "#475569", background: "none", border: "none", cursor: "pointer",
+        padding: "8px 14px", display: "flex", alignItems: "center", gap: "6px",
+        transition: "color 0.18s",
+      }}
+        onMouseEnter={e => e.currentTarget.style.color = "#0F172A"}
+        onMouseLeave={e => { if (!open) e.currentTarget.style.color = "#475569"; }}
+      >
+        Talk to an Expert
+        <ChevronDown size={14} style={{ transform: open ? "rotate(180deg)" : "none", transition: "transform 0.2s" }} />
+      </button>
+      {open && (
+        <div style={{
+          position: "absolute", top: "calc(100% + 8px)", [align]: 0,
+          background: "#FFFFFF", border: "1px solid #E2E8F0", borderRadius: "12px",
+          boxShadow: "0 16px 40px rgba(15,23,42,0.14)", padding: "8px", minWidth: "220px", zIndex: 200,
+        }}>
+          {PHONE_NUMBERS.map(num => (
+            <a key={num} href={`tel:+91${num}`} onClick={() => setOpen(false)} style={{
+              display: "flex", alignItems: "center", gap: "10px", padding: "10px 12px",
+              borderRadius: "8px", textDecoration: "none", color: "#0F172A",
+              fontFamily: "'Inter',sans-serif", fontWeight: 600, fontSize: "14px", transition: "background 0.15s",
+            }}
+              onMouseEnter={e => e.currentTarget.style.background = "#F8FAFC"}
+              onMouseLeave={e => e.currentTarget.style.background = "transparent"}
+            >
+              <span style={{ width: "30px", height: "30px", borderRadius: "8px", background: "#EFF6FF", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                <Phone size={14} color="#2563EB" />
+              </span>
+              {formatPhone(num)}
+            </a>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 export function Navbar({ onAuditClick }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
@@ -53,14 +109,7 @@ export function Navbar({ onAuditClick }: NavbarProps) {
 
         {/* Desktop Right CTAs */}
         <div className="desktop-nav" style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-          <a href="#" style={{
-            fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "14px",
-            color: "#475569", textDecoration: "none", padding: "8px 14px",
-            transition: "color 0.18s",
-          }}
-            onMouseEnter={e => e.currentTarget.style.color = "#0F172A"}
-            onMouseLeave={e => e.currentTarget.style.color = "#475569"}
-          >Talk to an Expert</a>
+          <PhoneDropdown />
           <button onClick={onAuditClick} style={{
             fontFamily: "'Inter', sans-serif", fontWeight: 600, fontSize: "14px",
             color: "#FFFFFF", background: "#2563EB", border: "none",
@@ -101,10 +150,9 @@ export function Navbar({ onAuditClick }: NavbarProps) {
               borderBottom: "1px solid #F1F5F9",
             }}>{link}</a>
           ))}
-          <a href="#" style={{
-            fontFamily: "'Inter', sans-serif", fontWeight: 500, fontSize: "15px",
-            color: "#475569", textDecoration: "none", padding: "12px 4px",
-          }}>Talk to an Expert</a>
+          <div style={{ padding: "8px 0 0" }}>
+            <PhoneDropdown align="left" />
+          </div>
         </div>
       )}
 
