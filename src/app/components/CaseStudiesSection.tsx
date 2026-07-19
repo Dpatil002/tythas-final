@@ -165,16 +165,11 @@ function CaseCard({ c, isActive }: { c: (typeof cases)[number]; isActive: boolea
           fontFamily: "'Inter',sans-serif", fontSize: "14px", lineHeight: 1.65, color: "#475569", margin: "0 0 20px", flex: 1,
           display: "-webkit-box", WebkitLineClamp: 4, WebkitBoxOrient: "vertical", overflow: "hidden",
         }}>{c.description}</p>
-        {c.website ? (
+        {c.website && (
           <a href={c.website} target="_blank" rel="noopener noreferrer"
             style={{ display: "inline-flex", alignItems: "center", gap: arrowGap, fontFamily: "'Inter',sans-serif", fontWeight: 600, fontSize: "13px", color: c.color, textDecoration: "none", transition: "gap 0.2s" }}
             onMouseEnter={() => setArrowGap("9px")} onMouseLeave={() => setArrowGap("5px")}
           >{c.cta} <ArrowUpRight size={14} /></a>
-        ) : (
-          <button
-            style={{ display: "inline-flex", alignItems: "center", gap: arrowGap, fontFamily: "'Inter',sans-serif", fontWeight: 600, fontSize: "13px", color: c.color, background: "none", border: "none", padding: 0, cursor: "pointer", transition: "gap 0.2s" }}
-            onMouseEnter={() => setArrowGap("9px")} onMouseLeave={() => setArrowGap("5px")}
-          >{c.cta} <ArrowUpRight size={14} /></button>
         )}
       </div>
     </motion.div>
