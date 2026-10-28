@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Twitter, Linkedin, Instagram } from "lucide-react";
+import { Mail, MapPin, Twitter, Linkedin, Instagram } from "lucide-react";
 import tythasLogo from "../../assets/tythas-logo.png";
 
 interface FooterProps { onAuditClick: () => void; }
@@ -52,9 +52,7 @@ export function Footer({ onAuditClick }: FooterProps) {
             <h4 style={{ fontFamily:"'Manrope',sans-serif", fontWeight:700, fontSize:"13px", color:"#FFFFFF", margin:"0 0 18px", textTransform:"uppercase", letterSpacing:"0.5px" }}>Contact</h4>
             <div style={{ display:"flex", flexDirection:"column", gap:"12px", marginBottom:"20px" }}>
               {[
-                { icon:<Mail size={14}/>, text:"work@tythas.com" },
-                { icon:<Phone size={14}/>, text:"8767977216" },
-                { icon:<Phone size={14}/>, text:"7887685816" },
+                { icon:<Mail size={14}/>, text:"tythasdigital@gmail.com" },
                 { icon:<MapPin size={14}/>, text:"Pune, India" },
               ].map(({icon,text})=>(
                 <span key={text} style={{ display:"flex", alignItems:"center", gap:"8px", fontFamily:"'Inter',sans-serif", fontSize:"13px", color:"#64748B" }}>
